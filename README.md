@@ -1,5 +1,6 @@
-# Pa4
+# PA4: Recursividad y grafos aplicados al campus
 
+### Organización del trabajo
 | Integrante | Rol |
 |---|---|
 |CESAR AUGUSTO CHAVERO MEJIAS | Actividad 1|
@@ -8,9 +9,13 @@
 |IMANOL HUMBERTO PONCE DE LEON PORTAL | Actividad 3|
 | JOSEPT MATTIAS YALAN LARA | Actividad 4 |
 
-### Objetivo del trabajo
+## Objetivo del trabajo
 
 Diseñar una propuesta para un módulo inteligente de orientación dentro del campus, que ordene información, analice rutas posibles entre ubicaciones y justifique qué camino resulta más conveniente según el contexto. Para ello, el equipo integra recursividad (divide y vencerás, y ordenamiento con Merge Sort) y grafos (modelado del campus, recorridos DFS y BFS, y el algoritmo heurístico A*), y argumenta qué solución recomienda implementar y cómo se relaciona con aplicaciones básicas de inteligencia artificial.
+
+## Propuesta del equipo
+
+El módulo de orientación combina cada técnica con la tarea que mejor resuelve. Se usa recursividad y Merge Sort para ordenar la información del campus, como las distancias desde la entrada principal. El campus se modela como un grafo ponderado y mixto, con ubicaciones como nodos y pasillos como aristas. DFS verifica la conectividad y las rutas accesibles o de evacuación, y BFS encuentra la ruta con menos tramos. A* es el motor principal de rutas, porque usa el costo real y una estimación hacia la meta para recomendar el camino más conveniente según el contexto.
 
 ## Actividad 1. Recursividad aplicada
 
