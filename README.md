@@ -133,7 +133,7 @@ Recomendamos implementar el módulo de orientación combinando cada técnica con
 
 La recursividad con divide y vencerás permite resolver problemas grandes dividiéndolos en subproblemas simples, y los grafos permiten modelar el campus con sus ubicaciones, pasillos y sentidos de tránsito. La **selección correcta de la técnica** según el problema (recursividad y Merge Sort para ordenar, DFS para conectividad, BFS para menos tramos y A\* para la mejor ruta) mejora la eficiencia, la precisión y la capacidad de justificar el camino recomendado. Por ello, recomendamos implementar el módulo con A* como motor de rutas, apoyado en la recursividad y en los recorridos DFS y BFS para las demás consultas.
 
-**Fuentes:** Sesión 11 (Recursividad), Sesión 12 (Algoritmos recursivos de ordenamiento) y Sesión 13 (Grafos), curso 30710. Russell, S., & Norvig, P. (2020). *Artificial Intelligence: A Modern Approach*. Pearson. Cormen, T. et al. (2009). *Introduction to Algorithms*. MIT Press.
+
 
 
 
