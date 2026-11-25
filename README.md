@@ -8,6 +8,9 @@
 |IMANOL HUMBERTO PONCE DE LEON PORTAL | Actividad 3|
 | JOSEPT MATTIAS YALAN LARA | Actividad 4 |
 
+### Objetivo del trabajo
+
+Diseñar una propuesta para un módulo inteligente de orientación dentro del campus, que ordene información, analice rutas posibles entre ubicaciones y justifique qué camino resulta más conveniente según el contexto. Para ello, el equipo integra recursividad (divide y vencerás, y ordenamiento con Merge Sort) y grafos (modelado del campus, recorridos DFS y BFS, y el algoritmo heurístico A*), y argumenta qué solución recomienda implementar y cómo se relaciona con aplicaciones básicas de inteligencia artificial.
 
 ## Actividad 1. Recursividad aplicada
 
