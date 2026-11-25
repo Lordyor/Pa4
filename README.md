@@ -9,7 +9,9 @@
 |IMANOL HUMBERTO PONCE DE LEON PORTAL | Actividad 3|
 | JOSEPT MATTIAS YALAN LARA | Actividad 4 |
 
-Link video de YT: https://www.youtube.com/watch?v=vBGZFx7yk4k
+### Video
+
+https://www.youtube.com/watch?v=vBGZFx7yk4k
 
 ## Objetivo del trabajo
 
