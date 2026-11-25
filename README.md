@@ -2,11 +2,11 @@
 
 | Integrante | Rol |
 |---|---|
-| JORGE GABRIEL ZUÑIGA SOTO | Actividad  2|
-| JOSEPT MATTIAS YALAN LARA | Actividad 4 |
-|IMANOL HUMBERTO PONCE DE LEON PORTAL | Actividad 3|
 |CESAR AUGUSTO CHAVERO MEJIAS | Actividad 1|
+| JORGE GABRIEL ZUÑIGA SOTO | Actividad  2|
  |ROY ORLANDO GRANADOS AGUILAR| Actividad 3|
+|IMANOL HUMBERTO PONCE DE LEON PORTAL | Actividad 3|
+| JOSEPT MATTIAS YALAN LARA | Actividad 4 |
 
 
 ## Actividad 1. Recursividad aplicada
