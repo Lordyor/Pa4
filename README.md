@@ -87,6 +87,54 @@ $$f(n) = g(n) + h(n)$$
 **Valor agregado:** A diferencia de algoritmos no informados como BFS o búsquedas sin orientación geográfica como Dijkstra —que expanden nodos en todas direcciones—, $A^*$ utiliza $h(n)$ como una *"brújula"* para priorizar únicamente los pasillos que acercan físicamente al usuario hacia su destino. Esto reduce considerablemente el espacio de búsqueda, acelera el tiempo de respuesta y encuentra el camino óptimo siempre que la heurística sea admisible (es decir, que no sobreestime el costo real restante).
 
 
+## Actividad 4. Argumentación final
+
+### 1. Comparación de las alternativas planteadas
+
+**Recursividad y divide y vencerás (Actividades 1 y 2)**
+
+| Criterio | Enfoque recursivo | Enfoque iterativo |
+|---|---|---|
+| Búsqueda de una ubicación en la ruta (Actividad 1) | `containsLocation(current.next, target)`: caso base claro (`null` o coincidencia) y código corto, O(n) | Un bucle `while` recorre la lista, también O(n), sin consumir pila |
+| Ordenamiento de catálogos de ubicaciones, horarios o distancias (Actividad 2) | Merge Sort: divide en mitades, ordena y combina; O(n log n), estable | Ordenamientos simples (burbuja, inserción): O(n²) |
+| Ventaja | Expresa el problema de forma natural y escala bien al crecer los datos | Menor uso de memoria |
+| Riesgo | Si falta el caso base o la lista es muy larga, hay desbordamiento de pila | Código más largo para problemas jerárquicos |
+
+**Recorridos en el grafo del campus (Actividad 3)**
+
+| Criterio | DFS | BFS | A* |
+|---|---|---|---|
+| Idea | Profundiza por una rama y retrocede (*backtracking*) | Explora por niveles desde el origen | Prioriza el nodo con menor f(n) = g(n) + h(n) |
+| Estructura auxiliar | Pila o recursión | Cola | Cola de prioridad |
+| Complejidad | O(V + E) | O(V + E) | Depende de la heurística; con una buena h explora muchos menos nodos |
+| ¿Camino más corto? | No garantizado | Sí, en número de aristas (si los pesos son uniformes) | Sí, con pesos, si h es admisible |
+| Considera pesos y meta | No | No | Sí: costo real g(n) y estimación hacia el destino h(n) |
+| Uso en el campus | Comprobar si existe una ruta accesible o de evacuación; detectar zonas aisladas | Ruta con menos tramos entre la Puerta Principal y la Biblioteca | Ruta más corta (metros, tiempo o esfuerzo) hacia un destino concreto |
+
+### 2. Solución recomendada
+
+Recomendamos implementar el módulo de orientación combinando cada técnica con la tarea que mejor resuelve:
+
+1. **Recursividad y Merge Sort** para procesar y ordenar la información del campus (listas de ubicaciones, horarios y distancias). Son eficientes (O(n log n)) y se mantienen rápidos si el campus crece.
+2. **DFS** para validar la conectividad del mapa, por ejemplo comprobar que existe al menos un camino accesible o de evacuación y detectar áreas aisladas por mantenimiento.
+3. **BFS** para consultas simples de "menor número de tramos" cuando los pasillos tienen un costo uniforme.
+4. **A\*** como motor principal para recomendar la ruta. El caso exige justificar qué camino resulta más conveniente según el contexto, y A* es la única de las tres alternativas que usa el costo real y una estimación hacia la meta. Con una heurística admisible, como la distancia en línea recta a partir de las coordenadas del plano, garantiza el camino óptimo explorando menos nodos. Además, al cambiar los pesos de las aristas (metros, segundos o esfuerzo físico) y respetar los sentidos del grafo mixto (torniquetes, escaleras de un solo sentido), se adapta al contexto del usuario.
+
+**Por qué es mejor que usar una sola técnica:** DFS y BFS no consideran distancias ni destino, así que pueden explorar zonas innecesarias o devolver rutas que no son las más cortas en metros. A* resuelve esa limitación, y la recursividad con divide y vencerás mantiene ordenados y accesibles los datos que alimentan el sistema.
+
+### 3. Relación con aplicaciones básicas de IA
+
+- **Búsqueda informada:** A* es un algoritmo de búsqueda heurística; la heurística h(n) actúa como una "brújula" que guía la búsqueda hacia la meta, y eso aporta la parte inteligente del módulo.
+- **Rutas y navegación:** los sistemas de mapas y asistentes de orientación modelan los lugares como grafos y calculan rutas con algoritmos como A*, igual que el módulo propuesto.
+- **Sistemas de recomendación:** los grafos también modelan relaciones entre usuarios y servicios, por ejemplo para sugerir lugares del campus según el perfil del estudiante.
+- **Ordenamiento en sistemas reales:** Merge Sort se utiliza en motores de búsqueda, bases de datos y sistemas de recomendación para ordenar resultados antes de mostrarlos.
+
+### 4. Conclusión
+
+La recursividad con divide y vencerás permite resolver problemas grandes dividiéndolos en subproblemas simples, y los grafos permiten modelar el campus con sus ubicaciones, pasillos y sentidos de tránsito. La **selección correcta de la técnica** según el problema (recursividad y Merge Sort para ordenar, DFS para conectividad, BFS para menos tramos y A\* para la mejor ruta) mejora la eficiencia, la precisión y la capacidad de justificar el camino recomendado. Por ello, recomendamos implementar el módulo con A* como motor de rutas, apoyado en la recursividad y en los recorridos DFS y BFS para las demás consultas.
+
+**Fuentes:** Sesión 11 (Recursividad), Sesión 12 (Algoritmos recursivos de ordenamiento) y Sesión 13 (Grafos), curso 30710. Russell, S., & Norvig, P. (2020). *Artificial Intelligence: A Modern Approach*. Pearson. Cormen, T. et al. (2009). *Introduction to Algorithms*. MIT Press.
+
 
 
 
