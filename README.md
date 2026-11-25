@@ -33,6 +33,32 @@ La **recursividad** es una técnica de diseño algorítmico en la que una funci�
 
 ## Actividad 2. Ordenamiento recursivo
 
+1. Descripción del problema
+
+Para el módulo inteligente de orientación del campus, se necesita organizar las ubicaciones de la institución según la distancia que existe desde la entrada principal.
+
+Para resolver este problema se implementó el algoritmo Merge Sort (ordenamiento por mezcla), que utiliza recursividad y el principio de divide y vencerás para ordenar los datos de menor a mayor distancia.
+
+2. ¿Qué es Merge Sort?
+
+Merge Sort es un algoritmo de ordenamiento que divide un conjunto de datos en partes más pequeñas hasta que cada parte contiene un solo elemento. Posteriormente, combina las partes ordenándolas progresivamente hasta obtener una lista completamente organizada.
+
+Este algoritmo utiliza la recursividad porque se llama a sí mismo para resolver las partes en las que se divide el conjunto original.
+
+## Datos iniciales
+1) 150
+2) 80
+3) 120
+4) 50
+5) 200
+
+## Resultados despues del ordenamiento
+1) 50
+2) 80
+3) 120
+4) 150
+5) 200
+
 
 
 
